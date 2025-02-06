@@ -2,6 +2,7 @@ import { useState } from "react"
 import Instructions from "./Instructions"
 import CelebrateorLoose from "./CelebrateorLoose"
 import End from "./End"
+import { motion } from "motion/react"
 
 const WholeApp = () => {
     const [ colors, setcolors ] = useState("#d2ff09")

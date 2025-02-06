@@ -1,3 +1,4 @@
+import { motion } from "motion/react"
 
 const CelebrateorLoose = ({ win, setwin, score, wins }) => {
    setTimeout(()=>{
@@ -7,12 +8,18 @@ const CelebrateorLoose = ({ win, setwin, score, wins }) => {
     }
     , 5000)
   return (
-    <div className="celos" style={{display : win}}>
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    className="celos" style={{display : win}}>
       <div className="containcelos">
           <p>{wins ? "😓": "🥳"}</p>
           <p>{ wins ? "You win" : "You loose"}, You score {score} Choose again</p>
       </div>
-    </div>
+    </motion.div>
+    
+    
   );
 }
 
