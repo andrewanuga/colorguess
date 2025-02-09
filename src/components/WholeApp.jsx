@@ -25,27 +25,28 @@ const WholeApp = () => {
     const [wins, setwins] = useState(true)
     let [count, setcount] = useState(0)
     const [openEnd, setOpenEnd] = useState("none")
-
+     
     const userscore =(col)=> {
         if(count == 6){
             setOpenEnd("flex")
+
         }
         if(colors !== col){
             setScore((prev)=>prev)
             setWin("flex")
             showRandomText()
             setwins((pre)=>!pre)
-            setcount((pre)=> pre+1)
+            setcount((pre)=> ++pre)
         }
         if(score < 6 && colors == col){
             setScore((prev)=>prev+1)
             setWin("flex")
             showRandomText()
-            setcount((pre)=> pre+1)
+            setcount((pre)=> ++pre)
         }
         else{
             "none"
-            setcount((pre)=> pre+1)
+            setcount((pre)=> ++pre)
         }
     }
     const reset=()=>{
