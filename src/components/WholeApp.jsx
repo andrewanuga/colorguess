@@ -29,20 +29,19 @@ const WholeApp = () => {
     const userscore =(col)=> {
         if(count == 6){
             setOpenEnd("flex")
-
         }
         if(colors !== col){
             setScore((prev)=>prev)
             setWin("flex")
             showRandomText()
             setwins((pre)=>!pre)
-            setcount((pre)=> ++pre)
+            setcount((pre)=> pre+1)
         }
         if(score < 6 && colors == col){
             setScore((prev)=>prev+1)
             setWin("flex")
             showRandomText()
-            setcount((pre)=> ++pre)
+            setcount((pre)=> pre+1)
         }
         else{
             "none"
