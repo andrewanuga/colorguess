@@ -50,8 +50,8 @@ const WholeApp = () => {
         }
     }
     const reset=()=>{
-        setScore(score=0)
-        setcount(count=0)
+        setScore(0)
+        setcount(0)
     }
     return (
     <div className="main">
